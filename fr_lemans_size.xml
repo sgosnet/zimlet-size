@@ -1,0 +1,35 @@
+<zimlet name = "fr_lemans_size"
+ version = "1.0"
+ label="${msg.label}"
+ description="${msg.description}"
+ target = "main compose-window view-window">
+	<include>fr_lemans_size.js</include>
+	<includeCSS>fr_lemans_size.css</includeCSS>
+	<handlerObject>fr_lemans_size_HandlerObject</handlerObject>
+	<zimletPanelItem label="${msg.frlemanssize_panelLabel}" icon="fr_lemans_size-panelIcon">
+		<toolTipText>${msg.frlemanssize_panelTip}</toolTipText>
+ 		<dragSource type="ZmFolder" />
+	        <contextMenu>
+		        <menuItem label="${msg.frlemanssize_panelInbox}" icon="Inbox" id="fr_lemans_size_MENU_INBOX" />
+		        <menuItem label="${msg.frlemanssize_panelSent}" icon="SentFolder" id="fr_lemans_size_MENU_SENT" />
+		        <menuItem label="${msg.frlemanssize_panelTrash}" icon="Trash" id="fr_lemans_size_MENU_TRASH" />
+                <menuItem label="${msg.frlemanssize_panelBriefcase}" icon="Briefcase" id="fr_lemans_size_MENU_BRIEFCASE" />
+                <menuItem label="${msg.frlemanssize_panelAll}" id="fr_lemans_size_MENU_ROOT" />
+	        </contextMenu>
+	</zimletPanelItem>
+	<userProperties>
+		<property type="enum" name="unit" label="${msg.frlemanssize_prefsUnit}">
+			<item label="Auto" value="auto"/>
+                        <item label="Ko" value="ko"/>
+                        <item label="Mo" value="mo"/>
+                        <item label="Go" value="go"/>
+		</property>
+		<property type="enum" name="level" label="${msg.frlemanssize_prefsTreeLevel}">
+                        <item label="${msg.frlemanssize_prefsAll}" value="0"/>
+                        <item label="1 ${msg.frlemanssize_prefsLevel}" value="1"/>
+                        <item label="2 ${msg.frlemanssize_prefsLevels}" value="2"/>
+                        <item label="3 ${msg.frlemanssize_prefsLevels}" value="3"/>
+                        <item label="4 ${msg.frlemanssize_prefsLevels}" value="4"/>
+		</property>
+	</userProperties>
+</zimlet>
