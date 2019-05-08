@@ -18,8 +18,13 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see http://www.gnu.org/licenses/.
 */
 
-/*	21/01/2019 Version 1.0
+/*	02/05/2019 Version 1.1
 *	Auteur : Stéphane GOSNET stephane.gosnet@lemans.fr
+*/
+
+/*
+*	Historique des corrections :
+*		Version 1.1 : Affichage des ascenseurs dans la fenêtre du rapport
 */
 
 /*
@@ -231,7 +236,7 @@ function(treeSize) {
                  this.myWindow.close();
         }
 
-	this.myWindow = window.open("", "TreeSizeZimbra", "width=600,height=800,titlebar=no,menubar=no");
+	this.myWindow = window.open("", "TreeSizeZimbra", "width=600,height=800,titlebar=no,menubar=no,scrollbars=yes");
 	this.myWindow.document.write(this.createHtmlTreeSize(treeSize)); 
 }
 
